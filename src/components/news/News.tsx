@@ -20,7 +20,10 @@ const News = () => {
 
 	if (!selectedCountry) return <Response text='Country not found.' />;
 
-	if (error) return <Response text='Some error occured. Try later.' />;
+	if (error) {
+		console.log(error);
+		return <Response text='Some error occured. Try later.' />;
+	}
 
 	if (isLoading) {
 		return (
