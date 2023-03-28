@@ -28,7 +28,7 @@ const Modal = ({ children, open, onClose }: Props) => {
 				</div>
 			</div>
 		</div>,
-		document.getElementById('modal')
+		document.getElementById('modal')!
 	);
 };
 
