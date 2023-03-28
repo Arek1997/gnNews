@@ -4,7 +4,7 @@ import { setLayout } from '../../../../../store/newsLayout-slice';
 const NewsLayoutSwap = () => {
 	const dispatch = useAppDispatch();
 	return (
-		<div className='form-control w-full max-w-xs'>
+		<div className='form-control'>
 			<label className='label'>
 				<span className='text-slate-200'>Choose News Layout</span>
 			</label>

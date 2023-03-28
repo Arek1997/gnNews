@@ -1,3 +1,4 @@
+import LandSwap from './lang-swap/LangSwap';
 import NewsLayoutSwap from './news-layout-swap/NewsLayoutSwap';
 
 interface Props {
@@ -6,12 +7,12 @@ interface Props {
 
 const Controls = ({ toggleModal }: Props) => {
 	return (
-		<div className='controls navbar-end flex items-center md:w-full'>
-			<div className='dropdown-left dropdown md:hidden'>
+		<div className='controls navbar-end flex items-center lg:w-full'>
+			<div className='dropdown-left dropdown lg:hidden'>
 				<label tabIndex={0} className='btn-ghost btn'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
-						className='h-5 w-5'
+						className='h-5 w-5 md:h-8 md:w-8'
 						fill='none'
 						viewBox='0 0 24 24'
 						stroke='currentColor'
@@ -37,14 +38,21 @@ const Controls = ({ toggleModal }: Props) => {
 					<li>
 						<NewsLayoutSwap />
 					</li>
+
+					<li>
+						<LandSwap />
+					</li>
 				</ul>
 			</div>
 
-			<div className='hidden md:flex md:items-center md:gap-x-6'>
+			<div className='hidden lg:flex lg:items-center lg:gap-x-6'>
 				<button className='btn' onClick={toggleModal}>
 					Project Summary
 				</button>
+
 				<NewsLayoutSwap />
+
+				<LandSwap />
 			</div>
 		</div>
 	);
