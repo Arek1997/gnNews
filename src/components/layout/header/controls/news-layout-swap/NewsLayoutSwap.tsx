@@ -4,8 +4,8 @@ import { setLayout } from '../../../../../store/newsLayout-slice';
 
 const NewsLayoutSwap = () => {
 	const { t } = useTranslation();
-
 	const dispatch = useAppDispatch();
+
 	return (
 		<div className='form-control'>
 			<label className='label'>

@@ -1,9 +1,8 @@
-import { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGE_KEY } from '../../../../../helpers/constans';
 import { getLanguage } from '../../../../../helpers/functions';
 
-const LandSwap = () => {
+const LangSwap = () => {
 	const { t, i18n } = useTranslation();
 	const defaultLang = getLanguage();
 
@@ -31,4 +30,4 @@ const LandSwap = () => {
 	);
 };
 
-export default LandSwap;
+export default LangSwap;

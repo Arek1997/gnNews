@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import LandSwap from './lang-swap/LangSwap';
+import LangSwap from './lang-swap/LangSwap';
 import NewsLayoutSwap from './news-layout-swap/NewsLayoutSwap';
 
 interface Props {
@@ -43,7 +43,7 @@ const Controls = ({ toggleModal }: Props) => {
 					</li>
 
 					<li>
-						<LandSwap />
+						<LangSwap />
 					</li>
 				</ul>
 			</div>
@@ -55,7 +55,7 @@ const Controls = ({ toggleModal }: Props) => {
 
 				<NewsLayoutSwap />
 
-				<LandSwap />
+				<LangSwap />
 			</div>
 		</div>
 	);
