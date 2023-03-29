@@ -34,7 +34,7 @@ const Controls = ({ toggleModal }: Props) => {
 				>
 					<li>
 						<button className='btn h-auto' onClick={toggleModal}>
-							{t('header.Project summary')}
+							{t('header.projectSummary.Project summary')}
 						</button>
 					</li>
 
@@ -50,7 +50,7 @@ const Controls = ({ toggleModal }: Props) => {
 
 			<div className='hidden lg:flex lg:items-center lg:gap-x-6'>
 				<button className='btn h-auto' onClick={toggleModal}>
-					{t('header.Project summary')}
+					{t('header.projectSummary.Project summary')}
 				</button>
 
 				<NewsLayoutSwap />
