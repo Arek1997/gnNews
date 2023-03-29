@@ -10,7 +10,7 @@ export const scrollToTop = () =>
 	});
 
 export const transformDate = (data: Date | string) =>
-	new Intl.DateTimeFormat('en-EN', {
+	new Intl.DateTimeFormat(getLanguage(), {
 		dateStyle: 'full',
 		timeStyle: 'medium',
 	}).format(new Date(data));
