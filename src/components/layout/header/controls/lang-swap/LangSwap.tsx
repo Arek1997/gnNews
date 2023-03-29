@@ -4,13 +4,15 @@ import { LANGUAGE_KEY } from '../../../../../helpers/constans';
 import { getLanguage } from '../../../../../helpers/functions';
 
 const LandSwap = () => {
-	const { i18n } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const defaultLang = getLanguage();
 
 	return (
 		<div className='form-control'>
 			<label className='label'>
-				<span className='text-slate-200'>Choose Language</span>
+				<span className='text-center text-slate-200'>
+					{t('header.Choose Language')}
+				</span>
 			</label>
 			<select
 				className='select-primary select select-sm'

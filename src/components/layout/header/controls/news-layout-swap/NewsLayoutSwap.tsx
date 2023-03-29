@@ -1,12 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '../../../../../hooks/reduxHook';
 import { setLayout } from '../../../../../store/newsLayout-slice';
 
 const NewsLayoutSwap = () => {
+	const { t } = useTranslation();
+
 	const dispatch = useAppDispatch();
 	return (
 		<div className='form-control'>
 			<label className='label'>
-				<span className='text-slate-200'>Choose News Layout</span>
+				<span className='text-center text-slate-200'>
+					{t('header.Choose News Layout')}
+				</span>
 			</label>
 			<select
 				className='select-primary select select-sm'
@@ -15,8 +20,8 @@ const NewsLayoutSwap = () => {
 					dispatch(setLayout(e.target.value as 'list' | 'tiles'))
 				}
 			>
-				<option value='list'>List</option>
-				<option value='tiles'>Tiles</option>
+				<option value='list'>{t('header.List')}</option>
+				<option value='tiles'>{t('header.Tiles')}</option>
 			</select>
 		</div>
 	);

@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
 	children: React.ReactNode;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const Modal = ({ children, open, onClose }: Props) => {
+	const { t } = useTranslation();
 	const showModal = open ? 'modal-open' : '';
 
 	return createPortal(
@@ -23,7 +25,7 @@ const Modal = ({ children, open, onClose }: Props) => {
 
 				<div className='modal-action'>
 					<button className='btn-primary btn' onClick={onClose}>
-						Close
+						{t('general.close')}
 					</button>
 				</div>
 			</div>

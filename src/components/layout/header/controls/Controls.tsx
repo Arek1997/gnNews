@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import LandSwap from './lang-swap/LangSwap';
 import NewsLayoutSwap from './news-layout-swap/NewsLayoutSwap';
 
@@ -6,6 +7,8 @@ interface Props {
 }
 
 const Controls = ({ toggleModal }: Props) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className='controls navbar-end flex items-center lg:w-full'>
 			<div className='dropdown-left dropdown lg:hidden'>
@@ -27,11 +30,11 @@ const Controls = ({ toggleModal }: Props) => {
 				</label>
 				<ul
 					tabIndex={0}
-					className='dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow'
+					className='dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-slate-600/80 p-2 shadow-2xl backdrop-blur-sm'
 				>
 					<li>
-						<button className='btn' onClick={toggleModal}>
-							Project Summary
+						<button className='btn h-auto' onClick={toggleModal}>
+							{t('header.Project summary')}
 						</button>
 					</li>
 
@@ -46,8 +49,8 @@ const Controls = ({ toggleModal }: Props) => {
 			</div>
 
 			<div className='hidden lg:flex lg:items-center lg:gap-x-6'>
-				<button className='btn' onClick={toggleModal}>
-					Project Summary
+				<button className='btn h-auto' onClick={toggleModal}>
+					{t('header.Project summary')}
 				</button>
 
 				<NewsLayoutSwap />

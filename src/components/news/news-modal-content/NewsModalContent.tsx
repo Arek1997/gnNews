@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 interface Props {
 	sourceName: string;
 	title: string;
@@ -13,6 +15,8 @@ const NewsModalContent = ({
 	description,
 	url,
 }: Props) => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<p className='text-xs'>{sourceName}</p>
@@ -25,7 +29,7 @@ const NewsModalContent = ({
 				rel='noopener noreferrer'
 				className='link-secondary link'
 			>
-				Read more
+				{t('general.Read more')}
 			</a>
 		</>
 	);

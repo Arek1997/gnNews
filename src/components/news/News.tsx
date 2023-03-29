@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { getSelectedCountry } from '../../helpers/functions';
 import { useAppSelector } from '../../hooks/reduxHook';
@@ -8,6 +9,7 @@ import NewsList from './news-list/NewsList';
 import Tiles from './tiles/Tiles';
 
 const News = () => {
+	const { t } = useTranslation();
 	const { countryName } = useParams();
 	const layout = useAppSelector((state) => state.newsLayout.layout);
 	const selectedCountry = getSelectedCountry(
@@ -18,11 +20,12 @@ const News = () => {
 		selectedCountry ? selectedCountry?.short : selectedCountry + ''
 	);
 
-	if (!selectedCountry) return <Response text='Country not found.' />;
+	if (!selectedCountry)
+		return <Response text={`${t('countryNews.Country not found')}.`} />;
 
 	if (error) {
 		console.log(error);
-		return <Response text='Some error occured. Try later.' />;
+		return <Response text={`${t('countryNews.Error occurred')}.`} />;
 	}
 
 	if (isLoading) {
@@ -41,7 +44,7 @@ const News = () => {
 					<li>
 						<Link to={'/'}>Home</Link>
 					</li>
-					<li>Country</li>
+					<li>{t('countryNews.Country')}</li>
 					<li>{selectedCountry.name}</li>
 				</ul>
 			</div>
