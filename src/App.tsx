@@ -1,7 +1,7 @@
 import Layout from './components/layout/Layout';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './pages/Home';
+import HomePage from './pages/HomePage';
 import CountryNews from './pages/CountryNews';
 
 const App = () => {
