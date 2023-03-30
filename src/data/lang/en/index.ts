@@ -17,6 +17,7 @@ export const en = {
 					'I fell in love with <a>daisyUI.</a>Already working with Tailwind significantly improved my DX and accelerated my work, and here I discovered such a library of ready-made components. It is based on Tailwind, I will definitely use it in the future.',
 				i18next:
 					'Working with the <a>i18next</a> framework was also interesting. It was my first attempt at translating a website.',
+				testing: `<span>Writing tests.</span> I just started learning it and I have to practice yet a lot. But already noticed huge benefits behind testing. So I'm sure I'll focus this topic more. `,
 				remind: 'I remind myself work with:',
 				lastProject:
 					'The last projects I wrote in <a>Next.js</a> uses File-Based Routing, so react-router-dom has been gone.',

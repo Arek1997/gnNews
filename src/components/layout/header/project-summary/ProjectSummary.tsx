@@ -75,6 +75,14 @@ const ProjectSummary = () => {
 					/>
 				</p>
 				<p>
+					<Trans
+						i18nKey='header.projectSummary.testing'
+						components={{
+							span: <span className='mr-2 font-semibold text-slate-300'></span>,
+						}}
+					/>
+				</p>
+				<p>
 					{t('header.projectSummary.remind')}
 					<span className='ml-2 font-semibold text-slate-300'>
 						react-redux, react-router-dom.
