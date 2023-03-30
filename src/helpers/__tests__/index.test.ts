@@ -52,6 +52,7 @@ describe('Testing Helpers Functions', () => {
 			const resturedValue = getLanguage();
 
 			expect(resturedValue).toBeDefined();
+			expect(resturedValue).toBeTypeOf('string');
 		});
 	});
 });
