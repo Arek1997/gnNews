@@ -46,10 +46,12 @@ App includes:
 - React
 - Redux/toolkit
 - React Router
+- React Testing Library
 - Typescript
 - Tailwindcss
 - DaisyUI
 - i18next
+- Vitest
 - Vite
 
 ## Screenshots 📺
