@@ -11,6 +11,7 @@ const Skeleton = ({ skeletonsNumber, withImage }: Props) => {
 			{arr.map((_, i) => {
 				return (
 					<div
+						data-testid='skeleton'
 						key={`skeleton-${i}`}
 						className='my-5 w-full rounded-md border p-4 md:mx-auto md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-2xl'
 					>

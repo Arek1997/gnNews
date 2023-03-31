@@ -13,6 +13,7 @@ const Modal = ({ children, open, onClose }: Props) => {
 
 	return createPortal(
 		<div
+			data-testid='modal'
 			className={`modal ${showModal} modal-bottom sm:modal-middle`}
 			onClick={(e) => {
 				if ((e.target as HTMLElement).matches('div.modal')) {
